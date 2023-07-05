@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/pagInicial.css">
+    
+    <link rel="shortcut icon" href="src/gymicon.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
+
+    <title>FitConnect</title>
+</head>
+<body>
+
+    <div class="loading-background">
+        <span class="loading-text"><img src="src/loading.gif" alt=""></span>
+    </div>
+
+    <h2>Dança e Zumba</h2>
+    <div class="carousel">
+        <div class="slide">
+            <img src="src/academia1.jpg" alt="">
+            <div class="descricao">
+                <p>Academia DAY</p>
+                <div class="hora">
+                    <img src="src/icons8-hour-24.png" alt="" id="hora">
+                    <p>08:00h às 23:00h</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="src/academia2.jpg" alt="">
+
+            <div class="descricao">
+                <p>Academia Body</p>
+                <div class="hora">
+                    <img src="src/icons8-hour-24.png" alt="" id="hora">
+                    <p>05:00h às 22:00h</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="src/academia3.jpg" alt="">
+
+            <div class="descricao">
+                <p>GYM Zumba</p>
+                <div class="hora">
+                    <img src="src/icons8-hour-24.png" alt="" id="hora">
+                    <p>07:00h às 20:00h</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="src/academia4.jpg" alt="">
+
+            <div class="descricao">
+                <p>Academia Fusion</p>
+                <div class="hora">
+                    <img src="src/icons8-hour-24.png" alt="" id="hora">
+                    <p>24h</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="src/academia5.jpg" alt="">
+
+            <div class="descricao">
+                <p>Academia Dance</p>
+                <div class="hora">
+                    <img src="src/icons8-hour-24.png" alt="" id="hora">
+                    <p>05:00h às 23:30h</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h2>Natação</h2>
+    <div class="carousel carousel1">
+        <div class="slide">
+            <img src="src/natacao1.jpg" alt="">
+
+            <div class="descricao">
+                <p>Natação Thermal</p>
+                <div class="hora">
+                    <img src="src/icons8-hour-24.png" alt="" id="hora">
+                    <p>10:00h às 17:30h</p>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="slide">
+                <img src="src/natacao2.jpg" alt="">
+    
+                <div class="descricao">
+                    <p>Agua Center</p>
+                    <div class="hora">
+                        <img src="src/icons8-hour-24.png" alt="" id="hora">
+                        <p>08:00h às 15:30h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="slide">
+                <img src="src/natacao3.jpg" alt="">
+    
+                <div class="descricao">
+                    <p>VIVA</p>
+                    <div class="hora">
+                        <img src="src/icons8-hour-24.png" alt="" id="hora">
+                        <p>11:00h às 17:30h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="slide">
+                <img src="src/natacao4.jpg" alt="">
+    
+                <div class="descricao">
+                    <p>Natação Interativa</p>
+                    <div class="hora">
+                        <img src="src/icons8-hour-24.png" alt="" id="hora">
+                        <p>08:00h às 20:30h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="slide">
+                <img src="src/natacao5.jpg" alt="">
+    
+                <div class="descricao">
+                    <p>Aquas</p>
+                    <div class="hora">
+                        <img src="src/icons8-hour-24.png" alt="" id="hora">
+                        <p>12:00h às 15:30h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      
+<script>
+
+    window.addEventListener('load', function() {
+      var loadingBackground = document.querySelector('.loading-background');
+      setTimeout(function() {
+        loadingBackground.style.display = 'none';
+      }, 5000); // Tempo em milissegundos (2 segundos = 2000 milissegundos)
+    });
+
+
+   $(document).ready(function(){
+  $('.carousel').slick({
+    slidesToShow: 3, // Quantidade de slides visíveis
+    slidesToScroll: 1, // Quantidade de slides a rolar por vez
+    prevArrow: '<button class="slick-prev" aria-label="Previous" type="button">Previous</button>', // Botão de slide anterior
+    nextArrow: '<button class="slick-next" aria-label="Next" type="button">Next</button>', // Botão de próximo slide
+    responsive: [
+      {
+        breakpoint: 768, // Alterar configurações para telas menores
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+});
+
+$(document).ready(function(){
+  $('.carousel.carousel1').slick({
+    slidesToShow: 3, // Quantidade de slides visíveis
+    slidesToScroll: 1, // Quantidade de slides a rolar por vez
+    prevArrow: '<button class="slick-prev" aria-label="Previous" type="button">Previous</button>', // Botão de slide anterior
+    nextArrow: '<button class="slick-next" aria-label="Next" type="button">Next</button>', // Botão de próximo slide
+    responsive: [
+      {
+        breakpoint: 768, // Alterar configurações para telas menores
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+});
+
+</script>      
+</body>
+</html>
