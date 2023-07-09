@@ -103,12 +103,13 @@ h2{
     color: #818181;
     width: 80%;
     margin: auto;
+    margin-bottom: 30px;
 }
 .acesso button{
     display: block;
 
     position: fixed;
-    bottom: 0px;
+    bottom: 50px;
 
     cursor: pointer;
     margin: 1em auto;
