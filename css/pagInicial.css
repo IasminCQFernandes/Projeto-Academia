@@ -8,6 +8,30 @@ body{
     height: 100vh;
     width: 100%;
 }
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    
+}
+header h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    padding-left: 15px;
+    padding-top: 15px;
+
+}
+.academia{
+    display: flex;
+}
+.usuario{
+    padding: 15px;
+}
+header img{
+    width: 30px;
+    padding-top: 7px;
+}
 .loading-background {
     position: fixed;
     top: 0;
@@ -26,10 +50,18 @@ h2{
     padding: 15px;
 }
 
+#ultimo{
+    margin-bottom: 40px;
+}
+
 .slide{
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
     padding: 5px ;
+    margin-bottom: 30px;
 }
+
 #hora{
     margin: 0;
     width: 15px;
@@ -49,17 +81,166 @@ h2{
     display: flex;
     justify-content: space-around;
     text-align: center;
+    padding-top: 5px;
+}
+.descricao img{
+    width: 20px;
 }
 
-.hora{
+.hora, .plano{
     display: flex;
     justify-content: start;
-    align-items: start;
+    align-items: center;
     padding-top: 15px;
 
 }
-.hora p{
+.hora p, .plano p{
     padding: 0;
     padding-left:5px ;
     font-size: 0.8em;
+}
+.acesso{
+    color: #818181;
+    width: 80%;
+    margin: auto;
+}
+.acesso button{
+    display: block;
+
+    position: fixed;
+    bottom: 0px;
+
+    cursor: pointer;
+    margin: 1em auto;
+
+    width: 11%;
+    margin: auto;
+
+    padding: 0.5em;
+    border-radius: 20px;
+    background-color: rgb(56, 56, 255);
+    border: none;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+
+}
+.pagamento{
+    display: none;
+
+    background-color: #fff;
+    box-shadow: -1px 0px 16px 4px rgb(192, 216, 224);
+    position: absolute;
+    top:40%;
+    left: 0;
+    width: 100%;
+
+    padding: 2%;
+
+    animation: display 1s ease-in-out;
+}
+
+@keyframes display {
+    0%{
+        left: -40%;
+    }100%{
+        left: 0%;
+    }
+}
+.pagar{
+    display: flex;
+    justify-content: space-around;
+}
+.pagamento p{
+    text-align:center;
+    font-family: 'Roboto', sans-serif;
+}
+.formasPagamento{
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+    text-align: center;
+}
+.formasPagamento img{
+    width: 40px;
+    margin-left: 1em;
+    margin-right:1em ;
+}
+
+.envio{
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    padding: 10%;
+
+    display: none;
+    flex-direction: column;
+}
+.envio input{
+    width: 95%;
+    height: 40px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    color: rgb(61, 60, 60);
+}
+.envio button{
+    background-color:rgb(111, 111, 255);
+    border: none;
+    color: #fff;
+    width: 95%;
+    height: 30px;
+    margin-top: 2%;
+    border-radius: 10px;
+    
+}
+.resposta{
+    display: none;
+    margin-top: 2%;
+}
+.pagarCartao{
+    padding: 10%;
+    display: none;
+}
+
+.pagarCartao a{
+    text-decoration: none;
+}
+.pagarPix{
+    font-family: 'Roboto', sans-serif;
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+.pagarPix span{
+    color: blue;
+    margin: auto;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    background-color: #dbeef7;
+    border-radius: 20px 20px 0 0;
+    animation: surgir 2s ease-in-out;
+}
+@keyframes surgir {
+    0%{
+        bottom: -50px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+.elementos{
+    width: 90%;
+    height: 50px;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+}
+
+footer img{
+   width: 25px;
+   padding-top: 10px;
 }

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/pagInicial.css">
+        
+        <link rel="shortcut icon" href="src/gymicon.png" type="image/png">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+    
+    
+        <title>FitConnect</title>
+</head>
+<body>
+    <header>
+        <div class="academia">
+            <h1>Academias em Belo Horizonte</h1>
+            <img src="src/location.gif" alt="local">
+        </div>
+    </header>
+
+    <main>
+        <h2>Qual o melhor plano para você?</h2>
+            <div class="carousel carousel1 carousel2">
+                <div class="slide">
+                    <img src="src/plano1.png" alt="">
+
+                    <div class="descricao">
+                        <p>Plano Basic</p>
+                        <div class="plano">
+                            <img src="src/price.png" alt="valor">
+                            <p>R$ 49,00</p>
+                        </div>
+                    </div>
+                    <div class="acesso">
+                        <p>Acesso Liberado: Academias de musculação uma vez ao dia.</p>
+                        <p>Bônus: Academia de Danças a cada 15 dias.</p>
+
+                        <button onclick="pagar()" id="button">Assinar</button>
+                    </div>
+
+                    
+                </div>
+                <div class="slide">
+                    <div class="slide">
+                        <img src="src/plano2.png" alt="">
+            
+                        <div class="descricao">
+                            <p>Plano Standard</p>
+                            <div class="plano">
+                                <img src="src/price.png" alt="valor">
+                                <p>R$ 79,00</p>
+                                
+                            </div>
+                        </div>
+                        <div class="acesso">
+                            <p>Acesso Liberado: 
+                            
+                            <p>Academias de musculação até 2x ao dia,
+                            Academias de danças uma vez por semana e
+                            Natação uma vez ao mês.</p>
+                            <p>Bônus:Instrutor(a) online uma vez por semana.</p>
+
+                            <button onclick="pagar()" id="button">Assinar</button>
+
+                        </div>
+
+                        
+                    </div>
+                </div>
+                <div class="slide" id="ultimo">
+                    <div class="slide">
+                        <img src="src/plano3.png" alt="">
+            
+                        <div class="descricao">
+                            <p>Plano Premium</p>
+                            <div class="plano">
+                                <img src="src/price.png" alt="valor">
+                                <p>R$ 119,00</p>
+                            </div>
+                        </div>
+                        <div class="acesso">
+                            <p>Acesso Liberado: Musculação até 3x ao dia, Danças 2x por semana e Natação uma vez por semana.</p>
+                            <p>Bônus:Instrutor(a) presencial e online acompanhando sua evolução dentro e fora dos treinos.</p>
+
+                            <button onclick="pagar()" id="button">Assinar</button>
+
+                        </div>
+
+                       
+                    </div>
+                </div>
+                
+                
+            </div>
+           
+    </main>
+    <div class="pagamento" id="pagamento">
+        <div class="pagar">
+            <p>Forma de pagamento:</p>
+            <img src="src/fechar.png" alt="fechar aba" onclick="fechar()">
+        </div>
+
+            <div class="formasPagamento">
+            <div class="boleto" onclick="boleto()">
+                <img src="src/boleto.png" alt="boleto" >
+                <p>Boleto</p>
+
+            </div>
+
+            <div class="cartao" onclick="cartao()">
+                <img src="src/cartao.png" alt="cartao">
+                <p>Cartão</p>
+            </div>
+
+            <div class="pix" onclick="pix()">
+                <img src="src/pix.png" alt="pix">
+                <p>Pix</p>
+            </div>
+
+        </div>
+        <div class="envio" id="boleto">
+            <label for="email">Envio do boleto:
+            <input type="email" placeholder="Email principal" id="email"> </label>
+            <button onclick="enviarBoleto()">Enviar</button>
+
+            <div class="resposta" id="resposta">
+                <p>Boleto enviado para o email!</p>
+            </div>
+        </div>  
+
+        <div class="pagarCartao" id="pagarCartao">
+
+            <p> <a href="linkDePagamentoOnlineFicticio.com.br">Clique aqui para acessar o pagamento online</a></p> 
+
+        </div>
+
+        <div class="pagarPix" id="pagarPix">
+            <p>Link Copia e Cola Pix:</p>
+            <span>linkCopiaeColaParaPagamentoPix</span>
+        </div>
+    </div>
+
+    <footer>
+        <div class="elementos">
+            <img src="src/home-cinza.png" alt="home" onclick="home()" id="home">
+
+            <img src="src/preco-preto.png" alt="valores" onclick="preco()" id="preco">
+        
+            <img src="src/usuario-cinza.png" alt="usuario" onclick="login()" id="usuario">
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function(){
+  $('.carousel.carousel1.carousel2').slick({
+    slidesToShow: 3, // Quantidade de slides visíveis
+    slidesToScroll: 1, // Quantidade de slides a rolar por vez
+    prevArrow: '<button class="slick-prev" aria-label="Previous" type="button">Previous</button>', // Botão de slide anterior
+    nextArrow: '<button class="slick-next" aria-label="Next" type="button">Next</button>', // Botão de próximo slide
+    responsive: [
+      {
+        breakpoint: 768, // Alterar configurações para telas menores
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+});
+
+
+function pagar() {
+
+
+    const pagamento = document.getElementById("pagamento")
+    pagamento.style.display = 'block';
+
+
+    const body = document.querySelector("main")
+    body.style.opacity = "0.5"
+
+}
+
+function fechar() {
+    const pagamento = document.getElementById("pagamento")
+    pagamento.style.display = 'none';
+
+    const body = document.querySelector("main")
+    body.style.opacity = "1"
+}
+
+
+function boleto() {
+    const boleto = document.getElementById("boleto");
+    boleto.style.display = 'block';
+}
+
+function enviarBoleto() {
+    const resposta = document.getElementById("resposta");
+    resposta.style.display = 'block';
+   
+
+    setTimeout(function() {
+        const boleto = document.getElementById("boleto");
+    boleto.style.display = 'none';
+    }, 2000);
+}
+
+function cartao() {
+    const pagarCartao = document.getElementById("pagarCartao");
+    pagarCartao.style.display = 'block'
+
+}
+function pix() {
+    const pagarPix = document.getElementById("pagarPix");
+    pagarPix.style.display = 'flex'
+}
+
+
+function home() {
+    window.location.href = "pagInicial.html"
+    }
+function preco() {
+    window.location.href = "preco.html"
+
+    }
+function login() {
+    window.location.href = "login.html"
+    }
+
+    </script>
+</body>
+</html>
