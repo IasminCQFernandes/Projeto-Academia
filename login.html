@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/pagInicial.css">
+        
+        <link rel="shortcut icon" href="src/gymicon.png" type="image/png">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+    
+    
+        <title>FitConnect</title>
+</head>
+<body>
+
+    <header class="imgLogin">
+        <img src="src/loginBackground.gif">
+    </header>
+
+    <main class="loginMain">
+        <form>
+            <h2>E-mail:</h2>
+            <input type="email" id="email">
+            <h2>Senha:</h2>
+            <input type="password" min="8" id="senha">
+
+            <div class="botoes">
+                <button type="submit" id="login" onclick="enviarLogin()">Login</button>
+
+                <button type="submit" onclick="enviarCadastrar()">Cadastrar</button>
+            </div>
+        </form>
+    </main>
+    
+    <footer>
+        <div class="elementos">
+            <img src="src/home-cinza.png" alt="home" onclick="home()" id="home">
+
+            <img src="src/preco-cinza.png" alt="valores" onclick="preco()" id="preco">
+        
+            <img src="src/usuario-preto.png" alt="usuario" onclick="login()" id="usuario">
+        </div>
+    </footer>
+
+    
+    <script>
+        function enviarLogin(){
+    
+
+            let email = document.getElementById("email").value
+            let senha = document.getElementById("senha")
+
+            if (email == "" || senha == "") {
+                alert('Insira os dados necessarios!')
+            }else{
+                alert('Login realizado!')
+                window.location.href = "pagInicial.html"
+            }  
+        }
+
+        function enviarCadastrar(){
+    
+
+            let email = document.getElementById("email").value
+            let senha = document.getElementById("senha")
+
+            if (email == "" || senha == "") {
+                alert('Insira os dados necessarios!')
+            }else{
+                alert('Cadastro realizado!')
+                window.location.href = "pagInicial.html"
+            }  
+        }
+
+        function home() {
+        window.location.href = "pagInicial.html"
+        }
+        function preco() {
+        window.location.href = "preco.html"
+
+        }
+        function login() {
+        window.location.href = "login.html"
+        }
+
+        document.getElementById("login").addEventListener("click", function(event) {
+        event.preventDefault(); // Impede o comportamento padrão do botão (recarregar a página)
+        });
+
+       
+    </script>
+</body>
+</html>

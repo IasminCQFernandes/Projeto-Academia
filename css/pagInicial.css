@@ -245,3 +245,50 @@ footer img{
    width: 25px;
    padding-top: 10px;
 }
+
+.imgLogin{
+    width: 100%;
+}
+.imgLogin img{
+    padding: 0;
+    width: 100%;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+.loginMain h2{
+    padding-left: 15px;
+}
+.loginMain input{
+    width: 90%;
+    height: 30px;
+    border-radius: 10px;
+    border:1px solid gray;
+    margin: auto;
+    margin-bottom: 2%;
+}
+.botoes{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+.botoes button{
+    width: 43%;
+    height: 30px;
+    margin: auto;
+    border-radius: 10px;
+    margin: 5px;
+    border: none;
+    background-color: blue;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+
+}

@@ -1,1 +1,0 @@
-document.querySelector('.pagamento').style = 'display:block;'
